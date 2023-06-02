@@ -27,7 +27,7 @@ const Users = () => {
     <Grid css={{cursor: `url(${cursor}), default`}} 
     minH={'100vh'} templateColumns={['1fr','5fr 1fr']}>
 
-    <Box p={['0','16']} overflow={'auto'}>
+    <Box p={['0','16']} overflowX={'auto'}>
 
     <Heading textTransform={'uppercase'} children='All Users' 
     my={'16'} textAlign={['center','left']}
@@ -45,7 +45,8 @@ const Users = () => {
         <Th>Email</Th>
         <Th>Role</Th>
         <Th>Subscription</Th>
-        <Th isNumeric>Action</Th>       //text align will be right automatically
+        {/* text align will be right automatically */}
+        <Th isNumeric>Action</Th>       
       </Tr>
     </Thead>
 
@@ -74,7 +75,7 @@ const Users = () => {
 
 export default Users;
 
-function Row(item, updateHandler, deleteButtonHandler){
+function Row({item, updateHandler, deleteButtonHandler}) {
   return (
     <Tr>
       <Td>#{item._id}</Td>
@@ -98,5 +99,5 @@ function Row(item, updateHandler, deleteButtonHandler){
 
       </Td> 
     </Tr>
-  )
+  );
 }
