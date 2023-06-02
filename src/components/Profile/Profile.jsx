@@ -8,8 +8,8 @@ import { useState } from 'react'
 const Profile = () => {
 
 const user = {
-  name:'Amit',
-  email:'uic.21mca2933@gmail.com',
+  name:'Ashish',
+  email:'ashishrajstr@gmail.com',
   cratedAt: String(new Date().toISOString()),
   role:'user',
   subscription:{
